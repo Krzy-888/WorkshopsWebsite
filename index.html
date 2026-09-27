@@ -1,66 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            h1{
-                padding: 2%;
-                text-align: center;
-                color: #ffffff;
-            }
-            h2{
-                text-align: center;
-                color: #ffffff;
-            }
-            h3{
-                margin-left: 5%;
-                color: #ffffff;
-            }
-            html{
-                margin: 0px;
-            }
-            .container{
-                font-family: 'Courier New' ;
-                margin-top: 0px;
-                margin-right: 20%;
-                margin-left: 20%;
-                background-color: #1f962f;
-            }
-            body{
-                margin: 0px;
-                height: 100%;
-                width: 100%;
-                min-height: 100vh;
-                background-image: url("Tlo.png");
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-            }
-            .code-container{
-                background-color: #292828;
-                border: #0c0c0c;
-                color: #b8b8b8;
-                margin: 5%;
-            }
-            button{
-                border: none;
-                background-color: #5c5c5c;
-                color: #ffffff;
-                margin: 2%;
-                padding: 1%;
-            }
-            button:hover{
-                background-color: #949494;
-            }
-            a{
-                margin-left: 20%;
-                color: #e4dede;
-                text-decoration: none ;
-            }
-            a:hover{
-                background-color: #59a363;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <div class="container">
@@ -102,7 +43,7 @@
         <div class="code-container">
             <button onclick="KopiujCode(this)">Kopiuj</button>
 <pre><code>
-    Lorem ipsum 1
+    Lorem ipsum 2
 </code></pre>
         </div>
 
@@ -129,20 +70,7 @@
         </div>
 
         </div>
-        
-        <script>
-        function KopiujCode(button) {
-            const code = button.parentElement.querySelector("code").innerText;
-
-            navigator.clipboard.writeText(code);
-
-            button.innerText = "Skopiowano!";
-            
-            setTimeout(() => {
-                button.innerText = "Kopiuj";
-            }, 1500);
-        }
-        </script>
+        <script src="./js/script.js"></script>
     </body>
     
 </html>
