@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                padding: 2%;
+                text-align: center;
+                color: #ffffff;
+            }
+            h2{
+                text-align: center;
+                color: #ffffff;
+            }
+            h3{
+                margin-left: 5%;
+                color: #ffffff;
+            }
+            html{
+                margin: 0px;
+            }
+            .container{
+                font-family: 'Courier New' ;
+                margin-top: 0px;
+                margin-right: 20%;
+                margin-left: 20%;
+                background-color: #1f962f;
+            }
+            body{
+                margin: 0px;
+                height: 100%;
+                width: 100%;
+                min-height: 100vh;
+                background-image: url("Tlo.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+            .code-container{
+                background-color: #292828;
+                border: #0c0c0c;
+                color: #b8b8b8;
+                margin: 5%;
+            }
+            button{
+                border: none;
+                background-color: #5c5c5c;
+                color: #ffffff;
+                margin: 2%;
+                padding: 1%;
+            }
+            button:hover{
+                background-color: #949494;
+            }
+            a{
+                margin-left: 20%;
+                color: #e4dede;
+                text-decoration: none ;
+            }
+            a:hover{
+                background-color: #59a363;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Spis Warszataów</h1>
+        
+        <nav>
+            <a href="#Wtyczki">
+            Tworzenie wtyczek w QGIS
+            </a>
+        </nav>
+        <h2 id="Wtyczki">Tworzenie Wtyczek w QGIS</h2>
+        <nav>
+            <a href="#Wtyczki_step1">
+            Krok 1
+            </a><br>
+            <a href="#Wtyczki_step2">
+            Krok 2
+            </a><br>
+            <a href="#Wtyczki_step3">
+            Krok 3
+            </a><br>
+            <a href="#Wtyczki_step4">
+            Krok 4
+            </a><br>
+            <a href="#Wtyczki_step5">
+            Krok 5
+            </a><br>
+        </nav>
+        <h3 id="Wtyczki_step1">Krok 1</h3>
+        <div class="code-container">
+            <button onclick="KopiujCode(this)">Kopiuj</button>
+<pre><code>
+    Lorem ipsum 1
+</code></pre>
+        </div>
+          
+        <h3 id="Wtyczki_step2">Krok 2</h3>
+        
+        <div class="code-container">
+            <button onclick="KopiujCode(this)">Kopiuj</button>
+<pre><code>
+    Lorem ipsum 1
+</code></pre>
+        </div>
+
+        <h3 id="Wtyczki_step3">Krok 3</h3>
+        <div class="code-container">
+            <button onclick="KopiujCode(this)">Kopiuj</button>
+<pre><code>
+    Lorem ipsum 3
+</code></pre>
+        </div>
+        <h3 id="Wtyczki_step4">Krok 4</h3>
+        <div class="code-container">
+            <button onclick="KopiujCode(this)">Kopiuj</button>
+<pre><code>
+    Lorem ipsum 4
+</code></pre>
+        </div>
+        <h3 id="Wtyczki_step5">Krok 5</h3>
+        <div class="code-container">
+            <button onclick="KopiujCode(this)">Kopiuj</button>
+<pre><code>
+    Lorem ipsum 5
+</code></pre>
+        </div>
+
+        </div>
+        
+        <script>
+        function KopiujCode(button) {
+            const code = button.parentElement.querySelector("code").innerText;
+
+            navigator.clipboard.writeText(code);
+
+            button.innerText = "Skopiowano!";
+            
+            setTimeout(() => {
+                button.innerText = "Kopiuj";
+            }, 1500);
+        }
+        </script>
+    </body>
+    
+</html>
